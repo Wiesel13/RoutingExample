@@ -1,0 +1,39 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml"
+	controllerName="RoutingExample.RoutingExample.controller.Detail">
+	<App>
+		<pages>
+			<Page title="Kundenseite" showNavButton="true" navButtonPress=".onNavBack" id="Kundenseite">
+				<content>
+					<Table noDataText="NO DATA" id="Kundentabelle" itemPress="_onTableItemPress" items="{/ZKUNDE_ENTITYTYPESet}">
+						<!--itemPress="_onTableItemPress"-->
+						<items>
+							<ColumnListItem type="Active" id="item0">
+								<cells>
+									<Text text="{Kundennr}" id="text1"/>
+									<Text text="{Vorname}" id="text2"/>
+									<Text text="{Nachname}" id="text3"/></cells>
+							</ColumnListItem>
+						</items>
+						<columns>
+							<Column id="column0">
+								<header>
+									<Label text="Kundennr" id="label0"/>
+								</header>
+							</Column>
+							<Column id="column1">
+								<header>
+									<Label text="Vorname" id="label1"/>
+								</header>
+							</Column>
+							<Column id="column2">
+								<header>
+									<Label text="Nachname" id="label2"/>
+								</header>
+							</Column>
+						</columns>
+					</Table>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
